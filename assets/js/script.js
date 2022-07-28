@@ -21,7 +21,7 @@ function trackTime() {
             $(this).removeClass("future");
             $(this).removeClass("present");
             $(this).addClass("past");
-        } else if (blockTime=== timeOf) {
+        } else if (blockTime === timeOf) {
             $(this).removeClass("past")
             $(this).removeClass("future");
             $(this).addClass("present");
