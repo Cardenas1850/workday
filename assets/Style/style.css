@@ -23,8 +23,8 @@ body {
   
   .description{
     white-space: pre-wrap;
-    background-color: #24292a;
-    color: red;
+    border: #000000;
+ 
   }
   
   .time-block{

@@ -1,5 +1,5 @@
 //wrtie code to display date
-var todayDate = moment().format('dddd, MMM do YYYY');
+var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
 //wrtie code to have save button work
 $(document).ready(function () {
@@ -9,8 +9,29 @@ $(document).ready(function () {
         //write code to save things into local storage
 localStorage.setItem(time, text);
     })
+//set past, present, future
 
+function trackTime() {
+    var timeOf = moment().hour();
 
+    $(".time-block").each(function () {
+        var blockTime = parseInt($(this).attr("id").split("hour"[1]));
+
+        if (blockTime < timeOf) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).addClass("past");
+        } else if (blockTime=== timeOf) {
+            $(this).removeClass("past")
+            $(this).removeClass("future");
+            $(this).addClass("present");
+        } else {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+        }
+    })
+}
 
 // get items from local storeage
 
@@ -27,4 +48,7 @@ $("hour5p .description").val(localStorage.getItem("hour5p"));
 $("hour6p .description").val(localStorage.getItem("hour6p"));
 $("hour7p .description").val(localStorage.getItem("hour7p"));
 $("hour8p .description").val(localStorage.getItem("hour8p"));
+
+trackTime();
+
 })
