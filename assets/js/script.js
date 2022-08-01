@@ -30,7 +30,7 @@ function trackTime() {
             $(this).removeClass("past");
             $(this).addClass("future");
         }
-    })
+    });
 }
 
 // get items from local storeage
