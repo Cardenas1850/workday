@@ -15,7 +15,7 @@ function trackTime() {
     var timeOf = moment().hour();
 
     $(".time-block").each(function () {
-        var blockTime = parseInt($(this).attr("id").split("hour"[1]));
+        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
         if (blockTime < timeOf) {
             $(this).removeClass("future");
@@ -34,20 +34,20 @@ function trackTime() {
 }
 
 // get items from local storeage
-
+$("hour2a .description").val(localStorage.getItem("hour2a"));
 $("hour8a .description").val(localStorage.getItem("hour8a"));
 $("hour9a .description").val(localStorage.getItem("hour9a"));
 $("hour10a .description").val(localStorage.getItem("hour10a"));
 $("hour11a .description").val(localStorage.getItem("hour11a"));
 $("hour12p .description").val(localStorage.getItem("hour12p"));
-$("hour1p .description").val(localStorage.getItem("hour1p"));
-$("hour2p .description").val(localStorage.getItem("hour2p"));
-$("hour3p .description").val(localStorage.getItem("hour3p"));
-$("hour4p .description").val(localStorage.getItem("hour4p"));
-$("hour5p .description").val(localStorage.getItem("hour5p"));
-$("hour6p .description").val(localStorage.getItem("hour6p"));
-$("hour7p .description").val(localStorage.getItem("hour7p"));
-$("hour8p .description").val(localStorage.getItem("hour8p"));
+$("hour13p .description").val(localStorage.getItem("hour1p"));
+$("hour14p .description").val(localStorage.getItem("hour2p"));
+$("hour15p .description").val(localStorage.getItem("hour3p"));
+$("hour16p .description").val(localStorage.getItem("hour4p"));
+$("hour17p .description").val(localStorage.getItem("hour5p"));
+$("hour18p .description").val(localStorage.getItem("hour6p"));
+$("hour19p .description").val(localStorage.getItem("hour7p"));
+$("hour20p .description").val(localStorage.getItem("hour8p"));
 
 trackTime();
 
